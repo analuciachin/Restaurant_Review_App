@@ -47,4 +47,14 @@
 
 </body>
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('service_worker.js')
+             .then(function(){ console.log("Service Worker Registered"); 
+    });
+  });
+}
+</script>
+
 </html>
