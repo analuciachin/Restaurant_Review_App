@@ -6,6 +6,7 @@ var urlsToCache = [
   '/css/over830.css',
   '/js/dbhelper.js',
   '/js/main.js',
+  '/js/restaurant_info.js',
   '/data/restaurants.json',
   '/img/1.jpg',
   '/img/2.jpg',
