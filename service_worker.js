@@ -30,9 +30,8 @@ var urlsToCache = [
   'restaurant.html?id=10'
 ];
 
-
+// Install the service worker
 self.addEventListener('install', function(event) {
-  // Perform install steps
   event.waitUntil(
     caches.open(cache_name).then(function(cache) {
       console.log('Opened cache');
@@ -41,7 +40,13 @@ self.addEventListener('install', function(event) {
   );
 });
 
+// Activate
+self.addEventListener('activate', function(event){
+  console.log('Activated');
+});
 
+
+// Cache and return requests
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response){
