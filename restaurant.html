@@ -13,15 +13,16 @@
 </head>
 
 <body class="inside">
+  <div class="grid">
   <!-- Beginning header -->
   <header>
     <!-- Beginning nav -->
     <a href="#maincontent" class="skip-link">Skip to main content</a>
-    <nav>
+    <nav class="header-grid">
       <h1><a href="/" tabindex="0">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
+    <ul id="breadcrumb" class="content-grid">
       <li><a href="/" tabindex="0">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
@@ -30,7 +31,7 @@
   <!-- End header -->
 
   <!-- Beginning main -->
-  <main id="maincontent" tabindex="-1">
+  <main id="maincontent" class="content-grid" tabindex="-1">
     <!-- Beginning map -->
     <section id="map-container">
       <div id="map"></div>
@@ -54,7 +55,7 @@
   <!-- End main -->
 
   <!-- Beginning footer -->
-  <footer id="footer">
+  <footer id="footer" class="footer-grid">
     Copyright (c) 2017 <a href="/" tabindex="0"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
   <!-- End footer -->
@@ -68,6 +69,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script>
   <!-- End scripts -->
 
+  </div> <!--grid-->
 </body>
 
 </html>
