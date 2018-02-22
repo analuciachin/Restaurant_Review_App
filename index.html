@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html>
+<htm90
 
 <head>
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css" type="text/css">
-<!--  <link rel="stylesheet" media="screen and (min-width:570px)" href="css/over570.css" type="text/css">
-  <link rel="stylesheet" media="screen and (min-width:830px)" href="css/over830.css" type="text/css">
+  <link rel="stylesheet" media="screen and (min-width:570px)" href="css/over570.css" type="text/css">
+<!--  <link rel="stylesheet" media="screen and (min-width:830px)" href="css/over830.css" type="text/css">
 -->
   <title>Restaurant Reviews</title>
 </head>
 
 <body>
   <div class="grid">
-  <header class="header-grid">
+  <header>
     <a href="#maincontent" class="skip-link">Skip to main content</a>
     <nav>
       <h1><a href="/" tabindex="0">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
-  <main id="maincontent" class="content-grid">
+  <main id="maincontent">
     <section id="map-container">
       <div id="map"></div>
     </section>
@@ -34,7 +34,9 @@
           <option value="all">All Cuisines</option>
         </select>
       </div>
-      <ul id="restaurants-list"></ul>
+      <div class="grid-restaurants-list">
+        <ul id="restaurants-list"></ul>
+      </div>
     </section>
   </main>
 
@@ -43,7 +45,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-YbpI0tqmIjaGK4vi0TqAgnkHJm_tj-c&libraries=places&callback=initMap"></script>
 
 
-  <footer id="footer" class="footer-grid">
+  <footer id="footer">
     Copyright (c) 2017 <a href="/" tabindex="0"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 

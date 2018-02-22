@@ -17,7 +17,7 @@ body,td,th,p{
 }
 body {
 	background-color: #f3f3f3;
-	margin: 0;
+	margin: 0 30px;
 	position:relative;
   font-size: 100%;
 }
@@ -302,17 +302,10 @@ nav h1 a {
 
 .grid {
   display: grid;
-  grid-template-columns: 5% 85% 10%;
 }
 
-.header-grid {
-  grid-column: 1 / 4;
-}
-
-.content-grid {
-  grid-column: 2 / 3;
-}
-
-.footer-grid {
-  grid-column: 1 / 4;
+.grid-restaurants-list ul {
+  display: grid;
+  padding: 0;
+  grid-template-columns: 100%;
 }
