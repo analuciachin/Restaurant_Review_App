@@ -109,7 +109,7 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
-  height: 500px;
+  height: 15%;
   width: 100%;
   background-color: #ccc;
   margin: 8px;
@@ -203,7 +203,7 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll;
-  height: 13%;
+  height: 30%;
   position: absolute;
 /*  right: 0;*/
   top: 100px;
@@ -297,16 +297,29 @@ nav h1 a {
   margin:0 10px;
 }
 
+#parent-restaurants-list {
+  position: relative;
+}
 
 /* ====================== CSS Grids ====================== */
 
 .grid {
   display: grid;
+  grid-gap: 20px;
 }
 
 .grid-restaurants-list ul {
   display: grid;
-  grid-gap: 5px;
-  grid-template-columns: 100%;
+  grid-gap: 10px;
+  padding: 0;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 80%;
+}
+
+.grid-inside {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  grid-template-columns: 100%;
+  grid-template-rows: 80%; 
 }

@@ -7,9 +7,9 @@
   <!-- Main CSS file -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css" type="text/css">
-  <link rel="stylesheet" media="screen and (min-width:570px)" href="css/over570.css" type="text/css">
-<!--  <link rel="stylesheet" media="screen and (min-width:830px)" href="css/over830.css" type="text/css">
--->
+  <link rel="stylesheet" media="screen and (min-width:620px)" href="css/over620.css" type="text/css">
+  <link rel="stylesheet" media="screen and (min-width:830px)" href="css/over830.css" type="text/css">
+
   <title>Restaurant Info</title>
 </head>
 
@@ -19,11 +19,11 @@
   <header>
     <!-- Beginning nav -->
     <a href="#maincontent" class="skip-link">Skip to main content</a>
-    <nav class="header-grid">
+    <nav>
       <h1><a href="/" tabindex="0">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" class="content-grid">
+    <ul id="breadcrumb">
       <li><a href="/" tabindex="0">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
@@ -32,7 +32,7 @@
   <!-- End header -->
 
   <!-- Beginning main -->
-  <main id="maincontent" class="content-grid" tabindex="-1">
+  <main id="maincontent" tabindex="-1">
     <!-- Beginning map -->
     <section id="map-container">
       <div id="map"></div>
@@ -46,17 +46,19 @@
       <p id="restaurant-address"></p>
       <table id="restaurant-hours"></table>
     </section>
+    
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section id="reviews-container">
-      <ul id="reviews-list"></ul>
+    
+    <section id="reviews-container" class="grid-reviews-container">
+      <ul id="reviews-list"></ul>  
     </section>
     <!-- End reviews -->
   </main>
   <!-- End main -->
 
   <!-- Beginning footer -->
-  <footer id="footer" class="footer-grid">
+  <footer id="footer">
     Copyright (c) 2017 <a href="/" tabindex="0"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
   <!-- End footer -->
@@ -70,7 +72,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script>
   <!-- End scripts -->
 
-  </div> <!--grid-->
+  </div>  
 </body>
 
 </html>
