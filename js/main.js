@@ -80,7 +80,7 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
-  /**remove tabindex from GoogleMaps**/
+  /**set tabindex to -1 for GoogleMaps**/
   google.maps.event.addListener(self.map,'tilesloaded',function(){
     [].slice.apply(document.querySelectorAll('#map a')).forEach(function(item) {
       item.setAttribute('tabindex','-1');
