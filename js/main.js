@@ -80,6 +80,14 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
+  /**remove tabindex from GoogleMaps**/
+  google.maps.event.addListener(self.map,'tilesloaded',function(){
+    [].slice.apply(document.querySelectorAll('#map a')).forEach(function(item) {
+      item.setAttribute('tabindex','-1');
+    });
+  })
+  /****/
+
   updateRestaurants();
 }
 
@@ -140,11 +148,11 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.alt = 'restaurant image';
+  image.alt = 'Image of the name of the restaurant';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
