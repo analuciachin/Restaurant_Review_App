@@ -82,7 +82,8 @@ window.initMap = () => {
   });
   /**set tabindex to -1 for GoogleMaps**/
   google.maps.event.addListener(self.map,'tilesloaded',function(){
-    [].slice.apply(document.querySelectorAll('#map a')).forEach(function(item) {
+    console.log("Event Listener Executed");
+    [].slice.apply(document.querySelectorAll('#map *')).forEach(function(item) {
       item.setAttribute('tabindex','-1');
     });
   })
@@ -148,7 +149,7 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.alt = 'Image of the name of the restaurant';
+  image.alt = 'Image of ' + restaurant.name;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 

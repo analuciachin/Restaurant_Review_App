@@ -13,10 +13,19 @@ window.initMap = () => {
         zoom: 16,
         center: restaurant.latlng,
         scrollwheel: false
-      });
+      });      
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
     }
+    /**set tabindex to -1 for GoogleMaps**/
+    google.maps.event.addListener(self.map,'tilesloaded',function(){
+      console.log("Event Listener Executed");
+      [].slice.apply(document.querySelectorAll('#map *')).forEach(function(item) {
+        item.setAttribute('tabindex','-1');
+      });
+    })
+    /****/
+
   });
 }
 
@@ -59,7 +68,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
-  image.alt = 'Image of the name of the restaurant';
+  image.alt = 'Image of ' + restaurant.name;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
